@@ -530,6 +530,5 @@ class DataService {
 }
 
 const dataService = new DataService()
-export { dataService }
 export default dataService
 

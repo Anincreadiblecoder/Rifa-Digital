@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Button } from './ui/button.jsx'
-import { Input } from './ui/input.jsx'
-import { Label } from './ui/label.jsx'
-import { Alert, AlertDescription } from './ui/alert.jsx'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card.jsx'
+import { Button } from '@/components/ui/button.jsx'
+import { Input } from '@/components/ui/input.jsx'
+import { Label } from '@/components/ui/label.jsx'
+import { Alert, AlertDescription } from '@/components/ui/alert.jsx'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { ArrowLeft, Lock, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import epavLogo from '../assets/EPAV2025.jpg'
 
@@ -24,7 +24,9 @@ function LoginPage({ onLogin, onBack }) {
     // Simular um pequeno delay para melhor UX
     await new Promise(resolve => setTimeout(resolve, 500))
 
-    if (password === ADMIN_PASSWORD) {
+    const storedAdminPassword = localStorage.getItem('epav-admin-password') || 'epav2025'; // Default password if not set
+
+    if (password === storedAdminPassword) {
       onLogin(true)
     } else {
       setError('Senha incorreta. Tente novamente.')

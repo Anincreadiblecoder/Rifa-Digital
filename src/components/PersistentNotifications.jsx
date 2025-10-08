@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { dataService } from '../services/dataService.js'
-import { Button } from './ui/button.jsx'
-import { Badge } from './ui/badge.jsx'
-import { Alert, AlertDescription } from './ui/alert.jsx'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card.jsx'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs.jsx'
+import dataService from '../services/dataService.js'
+import { Button } from '@/components/ui/button.jsx'
+import { Badge } from '@/components/ui/badge.jsx'
+import { Alert, AlertDescription } from '@/components/ui/alert.jsx'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card.jsx'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.jsx'
 import { Bell, RefreshCw, AlertTriangle, CheckCircle, Users, Clock, X, Eye, EyeOff, Trash2 } from 'lucide-react'
 
 const PersistentNotifications = ({ rifas, onRefresh }) => {
