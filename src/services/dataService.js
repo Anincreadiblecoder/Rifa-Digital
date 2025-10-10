@@ -523,6 +523,16 @@ class DataService {
     }
   }
 
+  // Status do sistema
+  getSystemStatus() {
+    return {
+      isSupabaseReady: this.isSupabaseReady(),
+      isOnline: this.isOnline,
+      hasSupabaseConfig: !!(currentSupabaseUrl && currentSupabaseAnonKey),
+      supabaseUrl: currentSupabaseUrl
+    }
+  }
+
   // Utilitários
   generateId() {
     return crypto.randomUUID()
@@ -530,5 +540,5 @@ class DataService {
 }
 
 const dataService = new DataService()
-export default dataService
+export { dataService }
 

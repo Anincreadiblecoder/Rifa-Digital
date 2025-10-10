@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import dataService from '../services/dataService.js'
-import { Badge } from '@/components/ui/badge.jsx'
-import { Alert, AlertDescription } from '@/components/ui/alert.jsx'
-import { Button } from '@/components/ui/button.jsx'
+import { dataService } from '../services/dataService.js'
+import { Badge } from './ui/badge.jsx'
+import { Alert, AlertDescription } from './ui/alert.jsx'
+import { Button } from './ui/button.jsx'
 import { Cloud, CloudOff, Database, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 
 const SystemStatus = ({ showDetails = false }) => {
